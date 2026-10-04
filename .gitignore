@@ -1,0 +1,42 @@
+# OS metadata
+.DS_Store
+Thumbs.db
+
+# Dependencies
+node_modules
+
+# Build output
+dist/
+*.vsix
+
+# VS Code test runner
+.vscode-test
+
+# Working directory
+work/
+
+# Editor / local history
+.history
+.worktrees/
+
+# AI tools
+.claude/settings.local.json
+.cocoindex_code/
+.codex
+.eslintrc.json
+.superpowers/
+
+# Visual inspection output
+tmp/
+
+# Transient workspace for update-readme-previews
+.tmp-readme-previews/
+
+# Manual comprehensive test files
+manual-test/
+test-complex.*
+*.test-manual.md
+*.test-manual.pdf
+
+# Internal migration plan
+CLI_MIGRATION_PLAN.md

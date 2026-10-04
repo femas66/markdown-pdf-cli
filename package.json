@@ -1,0 +1,72 @@
+{
+  "name": "markdown-pdf",
+  "displayName": "Markdown PDF",
+  "description": "Convert Markdown to PDF",
+  "version": "2.2.0",
+  "publisher": "yzane",
+  "icon": "images/icon.png",
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "license": "SEE LICENSE IN LICENSE.txt",
+  "keywords": [
+    "markdown",
+    "pdf",
+    "html",
+    "png",
+    "jpeg",
+    "PlantUML",
+    "mermaid",
+    "katex",
+    "cli"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yzane/vscode-markdown-pdf.git"
+  },
+  "sponsor": {
+    "url": "https://github.com/sponsors/yzane"
+  },
+  "main": "./dist/cli.js",
+  "bin": {
+    "markdown-pdf": "./dist/cli.js"
+  },
+  "files": [
+    "dist",
+    "styles",
+    "template",
+    "LICENSE.txt",
+    "README.md",
+    "README.vscode.md",
+    "README.cli.md",
+    "docs/cli-usage.md"
+  ],
+  "scripts": {
+    "build": "esbuild src/cli/index.ts --bundle --outfile=dist/cli.js --format=cjs --platform=node --banner:js=\"#!/usr/bin/env node\"",
+    "check": "tsc --noEmit",
+    "watch": "npm run build -- --watch",
+    "test": "tsx --test test/unit/**/*.test.ts"
+  },
+  "devDependencies": {
+    "@types/js-yaml": "^4.0.9",
+    "@types/markdown-it": "^14.1.2",
+    "@types/node": "^25.5.2",
+    "esbuild": "^0.28.0",
+    "tsx": "^4.21.0",
+    "typescript": "^6.0.2"
+  },
+  "dependencies": {
+    "@vscode/markdown-it-katex": "^1.1.2",
+    "commander": "^15.0.0",
+    "emoji-images": "^0.1.1",
+    "highlight.js": "^11.11.1",
+    "js-yaml": "^4.1.1",
+    "katex": "^0.16.45",
+    "markdown-it": "^14.1.1",
+    "markdown-it-container": "^4.0.0",
+    "markdown-it-emoji": "^3.0.0",
+    "markdown-it-plantuml": "^1.4.1",
+    "plantuml-encoder": "^1.4.0",
+    "puppeteer-core": "^24.40.0"
+  }
+}
